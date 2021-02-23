@@ -9,6 +9,8 @@ class WeatherModel {
         URL:
             "http://api.openweathermap.org/data/2.5/weather?q=$cityname&appid=13ced8aa99e42d2d6d87edb3eee890d6&units=metric");
     var deCodedData = await networking.netWorkData();
+    print(
+        "http://api.openweathermap.org/data/2.5/weather?q=$cityname&appid=13ced8aa99e42d2d6d87edb3eee890d6&units=metric");
     return deCodedData;
   }
 
@@ -51,7 +53,7 @@ class WeatherModel {
     }
   }
 
-  String getMessage(double temp) {
+  String getMessage(var temp) {
     if (temp > 25) {
       return 'It\'s 🍦 time';
     } else if (temp > 20) {

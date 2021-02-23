@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:clima/utilities/constants.dart';
-import 'package:flutter/services.dart';
+import 'package:flutter/material.dart';
 
 class CityScreen extends StatefulWidget {
   @override
@@ -39,6 +38,10 @@ class _CityScreenState extends State<CityScreen> {
                   style: TextStyle(color: Colors.black),
                   onChanged: (value) {
                     cityName = value;
+                  },
+                  ///this function works when user pressed on keyboard enter or submit
+                  onSubmitted: (value){
+                    Navigator.pop(context, cityName);
                   },
                   decoration: InputDecoration(
                     icon: Icon(
